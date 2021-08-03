@@ -1,0 +1,37 @@
+# Snyk (https://snyk.io) policy file, patches or ignores known vulnerabilities.
+version: v1.14.1
+# ignores vulnerabilities until expiry date; change duration by modifying expiry date
+ignore:
+  SNYK-JS-DECOMPRESSTAR-559095:
+    - gatsby-plugin-sharp > imagemin-mozjpeg > mozjpeg > bin-build > decompress > decompress-tar:
+        reason: None given
+        expires: '2020-10-27T15:42:44.590Z'
+    - gatsby-plugin-sharp > imagemin-pngquant > pngquant-bin > bin-build > decompress > decompress-tar:
+        reason: None given
+        expires: '2020-10-27T15:42:44.591Z'
+    - gatsby-plugin-sharp > imagemin-mozjpeg > mozjpeg > bin-build > decompress > decompress-tarbz2 > decompress-tar:
+        reason: None given
+        expires: '2020-10-27T15:42:44.592Z'
+    - gatsby-plugin-sharp > imagemin-pngquant > pngquant-bin > bin-build > decompress > decompress-tarbz2 > decompress-tar:
+        reason: None given
+        expires: '2020-10-27T15:42:44.592Z'
+    - gatsby-plugin-sharp > imagemin-mozjpeg > mozjpeg > bin-build > decompress > decompress-targz > decompress-tar:
+        reason: None given
+        expires: '2020-10-27T15:42:44.592Z'
+    - gatsby-plugin-sharp > imagemin-pngquant > pngquant-bin > bin-build > decompress > decompress-targz > decompress-tar:
+        reason: None given
+        expires: '2020-10-27T15:42:44.592Z'
+    - gatsby-plugin-sharp > imagemin-mozjpeg > mozjpeg > bin-build > download > decompress > decompress-tar:
+        reason: None given
+        expires: '2020-10-27T15:42:44.593Z'
+    - gatsby-plugin-sharp > imagemin-pngquant > pngquant-bin > bin-build > download > decompress > decompress-tar:
+        reason: None given
+        expires: '2020-10-27T15:42:44.593Z'
+    - gatsby-plugin-sharp > imagemin-mozjpeg > mozjpeg > bin-wrapper > download > decompress > decompress-tar:
+        reason: None given
+        expires: '2020-10-27T15:42:44.594Z'
+  SNYK-JS-PROPERTYEXPR-598800:
+    - gatsby > gatsby-cli > gatsby-recipes > yup > property-expr:
+        reason: None given
+        expires: '2020-10-27T15:42:44.595Z'
+patch: {}

@@ -1,0 +1,129 @@
+/* ================================================================================== */
+
+.sidebar-outer {
+  background-color: var(--main-bg-gutter);
+}
+
+.sidebar {
+  text-align: center;
+  padding: 1rem;
+  color: var(--main-bg-content);
+  background-color: var(--main-sidebar-color);
+}
+
+.sidebar-toronto {
+  background-color: var(--main-bg-gutter);
+  fill: var(--main-sidebar-color);
+}
+
+.sidebar-avatar {
+  background: var(--main-bg-content);
+  width: 25%;
+  border-radius: 50%;
+  padding: 0px;
+}
+
+.sidebar-icon {
+  background-color: var(--main-bg-content);
+  color: var(--main-sidebar-color);
+  margin: 10px 5px;
+  border-radius: 50%;
+  padding: 3px;
+}
+
+.sidebar-icon:hover {
+  background-color: var(--main-bg-content);
+  color: var(--sidebar-links);
+}
+
+.sidebar-links {
+  padding: 1rem 0;
+  line-height: 1.75;
+}
+
+.sidebar-links a {
+  font-size: 20px;
+  font-family: Bitter;
+  text-decoration: none;
+  color: var(--main-bg-content);
+}
+
+.sidebar-links a:hover {
+  color: var(--sidebar-links);
+}
+
+.sidebar-license {
+  font-size: 70%;
+}
+
+@media (max-device-width: 480px) {
+  .sidebar-icon {
+    display: none;
+  }
+}
+@media (min-device-width: 480px) {
+  .sidebar-outer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 18rem;
+  }
+  .sidebar-toronto {
+    position: fixed;
+    width: 17rem;
+    left: 1rem;
+    top: 1rem;
+    text-align: left;
+  }
+  .sidebar {
+    padding: 3px;
+    position: fixed;
+    width: 17rem;
+    left: 1rem;
+    bottom: 1rem;
+    top: 8rem;
+    text-align: left;
+  }
+  .sidebar-container {
+    position: absolute;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    bottom: 2rem;
+  }
+  .sidebar-speech-bubble {
+    position: relative;
+    background: var(--main-bg-content);
+    color: var(--main-sidebar-color);
+    padding: 10px;
+    font-size: 15px;
+    line-height: normal;
+    border-radius: 0.4em;
+  }
+
+  .sidebar-speech-bubble:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 20%;
+    width: 0;
+    height: 0;
+    border: 23px solid transparent;
+    border-bottom-color: var(--main-bg-content);
+    border-top: 0;
+    border-left: 0;
+    margin-left: -11.5px;
+    margin-top: -23px;
+  }
+  .sidebar-links {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}
+
+@media (max-device-width: 480px) {
+  .sidebar-outer {
+    padding: 1rem;
+    padding-bottom: 0px;
+  }
+}
