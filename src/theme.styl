@@ -1,32 +1,41 @@
-:root {
-  --main-bg-gutter: #ffffff;
-  --main-bg-content: #ffffff;
+:root 
+  --main-bg-gutter: #ffffff
+  --main-bg-content: #ffffff
 
-  --main-fg-content: #184059;
-  --main-fg-secondary: #8c2f1b;
-  --main-fg-accent: #0071bc;
+  --main-fg-content: #184059
+  --main-fg-secondary: #8c2f1b
+  --main-fg-accent: #0071bc
 
-  --main-sidebar-color: #000000;
-  --sidebar-links: #fdb81e;
+  --main-sidebar-color: #000000
+  --sidebar-links: #fdb81e
+  --sidebar-dull: #cccccc
 
-  --main-accent-content: #0071bc;
-  --alt-accent-content: #2e8540;
-}
+  --main-accent-content: #0071bc
+  --alt-accent-content: #2e8540
 
-h1,
 h2,
 h3,
 h4,
 h5,
-h6 {
-  font-family: Bitter, serif;
-  color: var(--alt-accent-content);
-}
+h6 
+  font-family: Bitter, serif
+  color: var(--alt-accent-content)
+  text-transform lowercase
 
-h1 {
-  color: var(--main-fg-secondary);
-}
 
-body {
-  font-family: PT Sans, sans-serif;
-}
+h1 
+  color: var(--main-fg-secondary)
+  text-transform lowercase
+
+
+body 
+  font-family: PT Sans, sans-serif
+
+html,
+body,
+#___gatsby,
+#gatsby-focus-wrapper
+  height: 100%
+
+pre
+  border-radius: 10px

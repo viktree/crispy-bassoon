@@ -2,14 +2,11 @@ module.exports = {
   siteMetadata: {
     title: "viktree",
     author: "Vikram Venktaramanan",
-    welcomeMessage: `Glad you made it! Here’s a corner of the internet that I am carving out for myself.Writing helps to clarify my ideas and improve my
+    welcomeMessage: `Glad you made it! Here’s a corner of the internet that I am carving out for myself. Writing helps to clarify my ideas and improve my
         communication skills.`,
     license: ` © 2021. All rights reserved.`,
     siteUrl: process.env.GATSBY_SITE_URL,
     disqusShortname: "viktree",
-    resources: {
-      resumeLink: process.env.GATSBY_RESUME_LINK,
-    },
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

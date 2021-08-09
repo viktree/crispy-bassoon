@@ -7,7 +7,12 @@
 
 import React from "react";
 import { useStaticQuery, graphql, Link } from "gatsby";
-import { FaGithub, FaRegFilePdf, FaLinkedin, FaLock } from "react-icons/fa";
+import {
+  FaGithub,
+  // FaRegFilePdf,
+  FaLinkedin,
+  FaRss,
+} from "react-icons/fa";
 
 import Toronto from "./toronto";
 
@@ -41,14 +46,14 @@ const GithubCircle = () => (
   </a>
 );
 
-const ResumeCircle = () => (
-  <a
-    href="https://viktree-resume.s3.amazonaws.com/resume-2021.pdf"
-    aria-label="Link to my resmue"
-  >
-    <FaRegFilePdf className="sidebar-icon" size="30px" />
-  </a>
-);
+// const ResumeCircle = () => (
+//   <a
+//     href="https://viktree-resume.s3.amazonaws.com/resume-2021.pdf"
+//     aria-label="Link to my resmue"
+//   >
+//     <FaRegFilePdf className="sidebar-icon" size="30px" />
+//   </a>
+// );
 
 const LinkedinCircle = () => (
   <a
@@ -59,9 +64,9 @@ const LinkedinCircle = () => (
   </a>
 );
 
-const PgpCircle = () => (
-  <a path="/pgp" text="Home">
-    <FaLock className="sidebar-icon" size="30px" />
+const RssCircle = () => (
+  <a href="https://viktree.netlify.app/rss.xml" aria-label="View RSS feed">
+    <FaRss className="sidebar-icon" size="30px" />
   </a>
 );
 
@@ -72,7 +77,7 @@ const Sidebar = () => {
   const license = metadata?.license;
 
   return (
-    <div className="sidebar-outer">
+    <div className="sidebar-gutter">
       <span className="sidebar-toronto">
         <Toronto />
       </span>
@@ -80,16 +85,20 @@ const Sidebar = () => {
         <div className="sidebar-container">
           <span>
             <Avatar />
+            <RssCircle />
             <GithubCircle />
-            <ResumeCircle />
+            {/* <ResumeCircle /> */}
             <LinkedinCircle />
-            <PgpCircle />
           </span>
           <div className="sidebar-speech-bubble">{description}</div>
           <div className="sidebar-links">
-            <PageLink path="/" text="Home" />
-            <PageLink path="/" text="Writings" />
-            <PageLink path="/contact" text="Contact Me" />
+            <PageLink className="sidebar-link" path="/" text="Writings" />
+            <PageLink className="sidebar-link" path="/about" text="About" />
+            <PageLink
+              className="sidebar-link"
+              path="/contact"
+              text="Contact Me"
+            />
           </div>
           <span className="sidebar-license">{license}</span>
         </div>

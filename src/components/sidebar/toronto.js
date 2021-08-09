@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const torontoSVG = () => (
   <svg
@@ -1277,6 +1277,6 @@ m100 -3 c0 -3 -4 -8 -10 -11 -5 -3 -10 -1 -10 4 0 6 5 11 10 11 6 0 10 -2 10
       <path d="M11790 2030 c0 -5 10 -10 23 -10 18 0 19 2 7 10 -19 13 -30 13 -30 0z" />
     </g>
   </svg>
-)
+);
 
-export default torontoSVG
+export default torontoSVG;

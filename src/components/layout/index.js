@@ -11,20 +11,27 @@ import PropTypes from "prop-types";
 import Sidebar from "../sidebar";
 import "./index.styl";
 
-const Layout = ({ children }) => {
+const Content = ({ content }) => (
+  <div className="content-outer">
+    <div className="content">{content}</div>
+  </div>
+);
+
+const SiteWrapper = ({ children }) => {
   return (
     <main className="flex-grid">
-      <Sidebar />
-      <div className="content-outer">
-        <div className="content">{children}</div>
+      <div className="flex-grid-sidebar">
+        <Sidebar />
       </div>
-      <div className="content-empty-space" />
+      <div className="flex-grid-content">
+        <Content content={children} />
+      </div>
     </main>
   );
 };
 
-Layout.propTypes = {
+SiteWrapper.propTypes = {
   children: PropTypes.node.isRequired,
 };
 
-export default Layout;
+export default SiteWrapper;

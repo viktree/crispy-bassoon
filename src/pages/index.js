@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from "gatsby";
 
 import { Link } from "../layouts";
 
-import { BlogPostSummary, Layout, SEO } from "../components";
+import { BlogPostSummary, SiteWrapper, SEO } from "../components";
 
 const BlogPost = ({ node }) => {
   const id = node?.fields?.slug;
@@ -27,7 +27,7 @@ const IndexPage = () => {
   const posts = data?.allMarkdownRemark?.edges;
 
   return (
-    <Layout>
+    <SiteWrapper>
       <SEO title="Home" />
       <h1>My writings</h1>
       <p>
@@ -73,7 +73,7 @@ const IndexPage = () => {
           />
         </li>
       </ul>
-    </Layout>
+    </SiteWrapper>
   );
 };
 

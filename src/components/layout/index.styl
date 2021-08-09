@@ -1,66 +1,44 @@
+
+$small-device-breakpoint = 750px
+
+$full-display-only = "(min-width: " + $small-device-breakpoint + ")"
+$mobile-only = "(max-width: " + $small-device-breakpoint + ")"
+
+.flex-grid
+  height: 100%
+  justify-content: space-between
+  display: flex
+  @media $mobile-only
+    display: block
+
+.flex-grid-content
+  height: 100%
+  padding: 20px
+  padding-top: 40px
+  $sidebar-size = 400px
+  max-width: $sidebar-size + 1000px
+  @media $full-display-only
+    padding-left: $sidebar-size
+
+.flex-grid-sidebar
+  @media $full-display-only
+    padding: 20px
+    padding-top: 40px
+    position: fixed
+    top: 0
+    left: 0
+    bottom: 0
+
 /* ================================================================================== */
 
-html,
-body,
-#___gatsby,
-#gatsby-focus-wrapper,
-.flex-grid {
-  height: 100%;
-  font-family: sans-serif;
-}
+.content-outer
+  background-color: var(--main-bg-gutter)
 
-.flex-grid {
-  justify-content: space-between;
-  display: flex;
-}
+.content
+  background-color: var(--main-bg-content)
+  color: var(--main-fg-content)
+  font-family: sans-serif
+  a
+    color: var(--main-accent-content)
+    text-decoration: none
 
-@media (max-device-width: 480px) {
-  .flex-grid {
-    display: block;
-  }
-}
-
-/* ================================================================================== */
-
-.content-outer {
-  height: 100%;
-  background-color: var(--main-bg-gutter);
-  padding: 1rem;
-}
-
-.content {
-  padding: 1rem;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
-  height: 100%;
-  overflow: auto;
-  background-color: var(--main-bg-content);
-  color: var(--main-fg-content);
-}
-
-.content a {
-  color: var(--main-accent-content);
-  text-decoration: none;
-}
-
-@media (min-device-width: 480px) {
-  .content-outer {
-    width: 100%;
-    flex: 1 0 auto;
-    padding: 1rem;
-    padding-top: 2rem;
-    padding-left: 20rem;
-  }
-  .content {
-    flex: 1 0 auto;
-    width: 100%;
-    padding: 2rem;
-  }
-}
-
-@media (min-device-width: 992px) {
-  .content {
-    padding: 2rem 4rem;
-    width: 60%;
-  }
-}

@@ -1,17 +1,16 @@
-import React from "react"
+import React from "react";
 
-import { ContactForm, Layout, SEO } from "../components"
+import { ContactForm, SiteWrapper } from "../components";
 
 const IndexPage = () => (
-  <Layout>
-    <SEO title="Contact" />
+  <SiteWrapper>
     <h1>Contact</h1>
-    Please leave a message after the &hellip; you don&#8217;t even have to wait
-    for the tone!
-    <br />
-    <br />
+    <p>
+      Please leave a message after the &hellip; you don&#8217;t even have to
+      wait for the tone!
+    </p>
     <ContactForm />
-  </Layout>
-)
+  </SiteWrapper>
+);
 
-export default IndexPage
+export default IndexPage;
